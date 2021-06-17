@@ -51,34 +51,8 @@ Wire Wire Line
 Wire Wire Line
 	4750 1800 4650 1800
 Connection ~ 4650 1800
-$Comp
-L Device:Antenna_Shield AE1
-U 1 1 60CA2DFC
-P 6150 2100
-F 0 "AE1" H 6294 2139 50  0000 L CNN
-F 1 "Antenna_Shield" H 6294 2048 50  0000 L CNN
-F 2 "" H 6150 2200 50  0001 C CNN
-F 3 "~" H 6150 2200 50  0001 C CNN
-	1    6150 2100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:L L1
-U 1 1 60CA3C71
-P 5850 2400
-F 0 "L1" V 5900 2250 50  0000 C CNN
-F 1 "1.8nH" V 5950 2550 50  0000 C CNN
-F 2 "Inductor_SMD:L_0603_1608Metric" H 5850 2400 50  0001 C CNN
-F 3 "~" H 5850 2400 50  0001 C CNN
-	1    5850 2400
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	5450 2400 5700 2400
-Wire Wire Line
-	6150 2400 6150 2300
-Text Notes 6350 2400 0    50   ~ 0
-no idea if this works\n
 Wire Wire Line
 	4550 1800 4550 1550
 $Comp
@@ -131,44 +105,6 @@ Wire Wire Line
 Wire Wire Line
 	4850 1950 5000 1950
 Connection ~ 5000 1950
-$Comp
-L Device:C C6
-U 1 1 60CA8290
-P 6300 2550
-F 0 "C6" H 6150 2650 50  0000 L CNN
-F 1 "2.7pF" V 6250 2300 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 6338 2400 50  0001 C CNN
-F 3 "~" H 6300 2550 50  0001 C CNN
-	1    6300 2550
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6000 2400 6050 2400
-$Comp
-L power:GND #PWR0103
-U 1 1 60CA62CE
-P 6450 2600
-F 0 "#PWR0103" H 6450 2350 50  0001 C CNN
-F 1 "GND" H 6455 2427 50  0000 C CNN
-F 2 "" H 6450 2600 50  0001 C CNN
-F 3 "" H 6450 2600 50  0001 C CNN
-	1    6450 2600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6050 2400 6050 2550
-Wire Wire Line
-	6050 2550 6150 2550
-Connection ~ 6050 2400
-Wire Wire Line
-	6050 2400 6150 2400
-Wire Wire Line
-	6250 2300 6450 2300
-Wire Wire Line
-	6450 2300 6450 2550
-Wire Wire Line
-	6450 2550 6450 2600
-Connection ~ 6450 2550
 Text GLabel 5650 2700 2    50   Input ~ 0
 TXD
 Wire Wire Line
@@ -1045,4 +981,74 @@ Text Label 7600 4550 0    50   ~ 0
 D-
 Text Label 7650 4650 0    50   ~ 0
 D+
+Wire Wire Line
+	6050 2400 6150 2400
+Wire Wire Line
+	6050 2550 6150 2550
+Wire Wire Line
+	6050 2400 6050 2550
+Connection ~ 6050 2400
+Wire Wire Line
+	6000 2400 6050 2400
+$Comp
+L Device:L L1
+U 1 1 60CA3C71
+P 5850 2400
+F 0 "L1" V 5900 2250 50  0000 C CNN
+F 1 "1.8nH" V 5950 2550 50  0000 C CNN
+F 2 "Inductor_SMD:L_0603_1608Metric" H 5850 2400 50  0001 C CNN
+F 3 "~" H 5850 2400 50  0001 C CNN
+	1    5850 2400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6450 2550 6450 2600
+$Comp
+L Device:C C6
+U 1 1 60CA8290
+P 6300 2550
+F 0 "C6" H 6150 2650 50  0000 L CNN
+F 1 "2.7pF" V 6250 2300 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6338 2400 50  0001 C CNN
+F 3 "~" H 6300 2550 50  0001 C CNN
+	1    6300 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 60CA62CE
+P 6450 2600
+F 0 "#PWR0103" H 6450 2350 50  0001 C CNN
+F 1 "GND" H 6455 2427 50  0000 C CNN
+F 2 "" H 6450 2600 50  0001 C CNN
+F 3 "" H 6450 2600 50  0001 C CNN
+	1    6450 2600
+	1    0    0    -1  
+$EndComp
+Text Notes 6550 1950 0    50   ~ 0
+no idea if this works\n
+$Comp
+L antenna:PRO-OB-440 E?
+U 1 1 60CC20A0
+P 6700 2250
+F 0 "E?" H 6830 2254 50  0000 L CNN
+F 1 "PRO-OB-440" H 6830 2163 50  0000 L CNN
+F 2 "ANT_PRO-OB-440" H 6700 2250 50  0001 L BNN
+F 3 "" H 6700 2250 50  0001 L BNN
+F 4 "Manufacturer Recommendations" H 6700 2250 50  0001 L BNN "STANDARD"
+F 5 "3.53mm" H 6700 2250 50  0001 L BNN "MAXIMUM_PACKAGE_HEIGHT"
+F 6 "3.2" H 6700 2250 50  0001 L BNN "PARTREV"
+F 7 "Proant AB" H 6700 2250 50  0001 L BNN "MANUFACTURER"
+	1    6700 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 2450 6450 2450
+Wire Wire Line
+	6450 2450 6450 2550
+Connection ~ 6450 2550
+Wire Wire Line
+	6150 2250 6500 2250
+Wire Wire Line
+	6150 2250 6150 2400
 $EndSCHEMATC
