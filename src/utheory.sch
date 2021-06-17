@@ -68,7 +68,7 @@ U 1 1 60CA3C71
 P 5850 2400
 F 0 "L1" V 5900 2250 50  0000 C CNN
 F 1 "1.8nH" V 5950 2550 50  0000 C CNN
-F 2 "Inductor_SMD:L_0201_0603Metric" H 5850 2400 50  0001 C CNN
+F 2 "Inductor_SMD:L_0603_1608Metric" H 5850 2400 50  0001 C CNN
 F 3 "~" H 5850 2400 50  0001 C CNN
 	1    5850 2400
 	0    -1   -1   0   
@@ -191,7 +191,7 @@ U 1 1 60CF4E5A
 P 5950 3900
 F 0 "U5" H 6180 4300 50  0000 L CNN
 F 1 "JTAG" H 6180 4209 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 5950 3900 50  0001 C CNN
+F 2 "" H 5950 3900 50  0001 C CNN
 F 3 "" H 5950 3900 50  0001 C CNN
 	1    5950 3900
 	1    0    0    -1  
@@ -728,28 +728,6 @@ TXD
 Text GLabel 2350 7300 3    50   Input ~ 0
 RXD
 $Comp
-L power:GND #PWR0114
-U 1 1 60EDA384
-P 2150 7300
-F 0 "#PWR0114" H 2150 7050 50  0001 C CNN
-F 1 "GND" H 2155 7127 50  0000 C CNN
-F 2 "" H 2150 7300 50  0001 C CNN
-F 3 "" H 2150 7300 50  0001 C CNN
-	1    2150 7300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint TP1
-U 1 1 60EE08C5
-P 2150 7200
-F 0 "TP1" H 2150 7400 50  0000 L CNN
-F 1 "gndct" H 2208 7227 50  0001 L CNN
-F 2 "microsd:testpad" H 2350 7200 50  0001 C CNN
-F 3 "~" H 2350 7200 50  0001 C CNN
-	1    2150 7200
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector:TestPoint TP2
 U 1 1 60EE269A
 P 2350 7200
@@ -771,8 +749,6 @@ F 3 "~" H 2700 7200 50  0001 C CNN
 	1    2500 7200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2150 7200 2150 7300
 Wire Wire Line
 	2350 7200 2350 7300
 Wire Wire Line
@@ -1065,4 +1041,8 @@ F 3 "" H 3750 2800 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3750 2700 3750 2800
+Text Label 7600 4550 0    50   ~ 0
+D-
+Text Label 7650 4650 0    50   ~ 0
+D+
 $EndSCHEMATC
